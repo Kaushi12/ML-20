@@ -1,0 +1,18 @@
+1) SVM or Support Vector Machine is a linear model for classification and regression problems. It can solve linear and non-linear problems and work well for many practical problems. The idea of SVM is simple: The algorithm creates a line or a hyperplane which separates the data into classes.
+
+2)Support vectors are data points that are closer to the hyperplane and influence the position and orientation of the hyperplane. Using these support vectors, we maximize the margin of the classifier. Deleting the support vectors will change the position of the hyperplane. These are the points that help us build our SVM.
+
+3)Because Support Vector Machine (SVM) optimization occurs by minimizing the decision vector w, the optimal hyperplane is influenced by the scale of the input features and it's therefore recommended that data be standardized (mean 0, var 1) prior to SVM model training.
+
+4)An SVM classifier can give the distance between the test instance and the decision boundary as output, so we can use that as a confidence score, but we cannot use this score to directly converted it into class probabilities.
+
+5)So if there are millions of instances, you should definitely use the primal form, because the dual form will be much too slow.
+
+6)If an SVM classifier trained with an RBF kernel underfits the training set, there might be too much regularization. To decrease it, you need to increase gamma or C (or both).
+
+7)Let’s call the QP parameters for the hard-margin problem H′, f′, A′ and b′. The QP parameters for the soft-margin problem have m additional parameters (np = n + 1 + m) and m additional constraints (nc = 2m). They can be defined like so:
+
+H is equal to H′, plus m columns of 0s on the right and m rows of 0s at the bottom
+f is equal to f′ with m additional elements, all equal to the value of the hyperparameter C.
+b is equal to b′ with m additional elements, all equal to 0.
+A is equal to A′, with an extra m × m identity matrix Im appended to the right,
